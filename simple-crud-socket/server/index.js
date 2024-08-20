@@ -12,7 +12,6 @@ const io = new Server(httpServer, {
 io.on("connection", (socket) => {
   socket.on("data", (data) => {
     crudData.push(data);
-
     socket.emit("crudData", crudData);
   });
 
